@@ -27,10 +27,10 @@ jobs:
     - name: Frontend compilation (syntax check)
       run: |
         cd client
-        find . -name" *.js" -exce node --check {} + 
+        find . -name "*.js" -exce node --check {} + 
 
         - name: Backend compilation (syntax check)
         run: |
           cd client
-          find . -name" *.js" -exce node --check {} + 
+          find . -name "*.js" -exce node --check {} + 
                    
