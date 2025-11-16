@@ -29,8 +29,8 @@ jobs:
         cd client
         find . -name "*.js" -exec node --check {} + 
 
-      - name: Backend compilation (syntax check)
+    - name: Backend compilation (syntax check)
       run: |
         cd client
         find . -name "*.js" -exec node --check {} + 
-                   
+                 
