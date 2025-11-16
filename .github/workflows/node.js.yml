@@ -11,7 +11,7 @@ on:
 jobs:
   build:
 # runner we have define here.
-    runs-on: sever01
+    runs-on: agent-1
 
     steps:
     # this indicate the cloing of the source code
