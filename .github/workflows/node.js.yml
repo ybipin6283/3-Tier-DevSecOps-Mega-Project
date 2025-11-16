@@ -1,0 +1,36 @@
+# name of the pipeline
+name: Node.js CICD Pipeline
+
+# CICD run on which request 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+# runner we have define here.
+    runs-on: server01
+
+    steps:
+    # this indicate the cloing of the source code
+    - name: Checkout the code
+      uses: actions/checkout@v4
+    #  indicate the cloning of the node js 
+    - name: Use Node.js 
+      uses: actions/setup-node@v4
+      with:
+        node-version: '23' # adjust the version as per your source code
+        #cache: 'npm'
+# in github action any linux command you want to use directly run: ls (for single) run: | for multi line commands
+    - name: Frontend compilation (syntax check)
+      run: |
+        cd client
+        find . -name"*.js" -exce node --check {} + 
+
+        - name: Backend compilation (syntax check)
+        run: |
+          cd client
+          find . -name"*.js" -exce node --check {} + 
+                   
